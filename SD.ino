@@ -1,7 +1,7 @@
 //function to set up and write to SD card on the reciving unit
 
 void SDSetup() { //sets up SD card and names it
-  String header = "Year, Month, Day, Hour, Minute, Second, Lat, Lon, Alt(ft), AltEst(ft), intT(F), extT(F), batTemp(F), msTemp(F), analogPress(PSI), msPressure(PSI), time since bootup (sec), Recent Radio Traffic, magnetometer x, magnetometer y, magnetometer z, accelerometer x, accelerometer y, accelerometer z, gyroscope x, gyroscope y, gyroscope z";
+  String header = "Year, Month, Day, Hour, Minute, Second, Lat, Lon, Alt(ft), AltEst(ft), intT(F), extT(F), batTemp(F), msTemp(F), analogPress(PSI), msPressure(PSI), time since bootup (sec), magnetometer x, magnetometer y, magnetometer z, accelerometer x, accelerometer y, accelerometer z, gyroscope x, gyroscope y, gyroscope z, heater status, siren status, Recent Radio Traffic";
   pinMode(chipSelect, OUTPUT);
   if (!SD.begin(chipSelect)) {
     updateOled("TURN OFF  AND INSERTSD        CARD!");

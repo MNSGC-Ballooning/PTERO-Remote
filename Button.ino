@@ -48,7 +48,7 @@ void button() {
   }
 
   else if (digitalRead(Button2) == HIGH && digitalRead(Button1) == HIGH && buttonPress2 == false) {
-    String sender = ID + "!NAME";
+    String sender = "NAME";
     xBee_ser.print(sender);
     buttonPress2 = true;
     updateOled("File Name Requested!");

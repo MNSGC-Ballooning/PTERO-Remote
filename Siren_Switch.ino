@@ -3,7 +3,7 @@ void SirenSwitch() {
   IDb = digitalRead(SwitchID);
 
   if ( read == false && IDb == 0) {
-    String sender = ID + "!SIRENOFF";
+    String sender = "SIRENOFF";
     xBee_ser.print(sender);
     updateOled(sender);
     Serial.println(sender);
@@ -12,7 +12,7 @@ void SirenSwitch() {
 
 
   else if ( read == true && IDb == 1) {
-    String sender = ID + "!SIRENON";
+    String sender = "SIRENON";
     xBee_ser.print(sender);
     updateOled(sender);
     read = false;

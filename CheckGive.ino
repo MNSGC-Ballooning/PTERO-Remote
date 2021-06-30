@@ -8,7 +8,7 @@ void CheckGive() {
     }
     digitalWrite(LED_BUILTIN, HIGH);
     dataPull = true;
-    String sender = ID + "!GIVE" + String(filename);
+    String sender = "GIVE" + String(filename);
     xBee_ser.print(sender);
     Serial.println(sender);
     sendCheck = true;
